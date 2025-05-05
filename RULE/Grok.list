@@ -1,0 +1,13 @@
+# NAME: Grok
+# AUTHOR: lawyuen
+# UPDATED: 2025-05-05
+DOMAIN-SUFFIX,xinto
+DOMAIN-SUFFIX,x.ai
+DOMAIN-SUFFIX,grok.com
+DOMAIN-SUFFIX,assetsconfigcdn.org
+DOMAIN-SUFFIX,imgs.search.brave.com
+DOMAIN-SUFFIX,beyondwickedmapping.org
+DOMAIN-SUFFIX,pbs.twimg.com
+DOMAIN-SUFFIX,egv4py1c-ios.mobile-messenger.intercom.com
+DOMAIN-SUFFIX,nexus-websocket-a.intercom.io
+USER-AGENT,Grok*
