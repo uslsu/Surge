@@ -1,1 +1,24 @@
-
+# NAME: Max
+# AUTHOR: lawyuen
+# UPDATED: 2025-05-05
+DOMAIN-SUFFIX,max.com
+DOMAIN-SUFFIX,hbomax.com
+DOMAIN-SUFFIX,hbonow.com
+DOMAIN-SUFFIX,cinemax.com
+DOMAIN-SUFFIX,maxgo.com
+DOMAIN-SUFFIX,discomax.com
+DOMAIN,wmff.warnermediacdn.com
+DOMAIN-SUFFIX,hbomaxcdn.com
+DOMAIN-SUFFIX,h264.io
+DOMAIN-SUFFIX,media.h264.io
+DOMAIN-SUFFIX,hbomaxdash.s.llnwi.net
+DOMAIN-SUFFIX,warnermediacdn.com
+DOMAIN-SUFFIX,wmcdp.io
+DOMAIN-SUFFIX,litix.io
+DOMAIN-SUFFIX,brightline.tv
+DOMAIN-SUFFIX,branch.io
+DOMAIN-SUFFIX,ngtv.io
+DOMAIN-SUFFIX,pypestream.com
+DOMAIN-SUFFIX,arkoselabs.com
+USER-AGENT,HBOMAX*
+PROCESS-NAME,com.hbo.hbonow
