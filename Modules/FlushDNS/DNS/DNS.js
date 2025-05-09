@@ -4,6 +4,19 @@
  * - Sends a notification with customizable title.
  * - Includes error handling and logging for robustness.
  */
+/**
+ * Clear Surge DNS Cache
+ * - Checks if $surge.clearDNSCache() is available before execution.
+ * - Provides error notification if API is unsupported.
+ */
+if (typeof $surge.clearDNSCache === 'function') {
+    $surge.clearDNSCache();
+    $notification.post("Flush DNS Cache", "", "DNS cache cleared successfully.");
+} else {
+    $notification.post("DNS Cache Error", "", "This Surge version does not support DNS cache clearing. Please update Surge to 5.8 or later.");
+}
+$done();
+
 try {
     // Parse only the 'title' parameter from $argument
     let title = "DNS Cache Cleared";
