@@ -2,6 +2,7 @@
  * Clear Surge DNS Cache (TF Compatible)
  * - Clears DNS cache using HTTP API (/v1/dns/flush).
  * - Updates panel with DNS delay information.
+ * - Supports custom title, icon, and color via arguments.
  */
 !(async () => {
     let panel = { title: "DNS Flush" };
