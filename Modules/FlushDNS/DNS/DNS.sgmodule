@@ -1,10 +1,10 @@
 #!name=Flush DNS
-#!desc=清除Surge的DNS缓存
+#!desc=快速清除Surge的DNS缓存
 #!category=Lawyuen
-#!arguments=TITLE:DNS Flush,ICON:cube,COLOR:#f2b32c
+#!arguments=TITLE:DNS Flush,ICON:cube,COLOR:#AFE59A
 #!arguments-desc=[参数设置]\n\n⓵ TITLE: 自定义面板标题。\n\n⓶ ICON: 自定义面板图标,需为有效的SFSymbolName,如不设置则默认。\n\n⓷ COLOR: 自定义图标颜色,需为颜色的HEX编码。
 # 更新日期：2025.05.09
-# 版本：3.3
+# 版本：3.4
 
 # [Panel]
 # - Displays an interactive button in Surge UI to manually clear DNS cache.
@@ -15,6 +15,23 @@ FlushDNS = script-name=FlushDNS, update-interval=600
 
 # [Script]
 # - FlushDNS: Handles manual clearing via panel button.
-# - Uses remote script from uslsu/Surge to clear DNS cache.
+# - Uses local script with compatibility check.
 [Script]
-FlushDNS = type=generic, timeout=10, script-path=https://raw.githubusercontent.com/uslsu/Surge/main/Modules/FlushDNS/DNS/DNS.js, argument=title={{{TITLE}}}&icon={{{ICON}}}&color={{{COLOR}}}
+FlushDNS = type=generic, timeout=10, script-path=optimized-DNS.js, argument=title={{{TITLE}}}&icon={{{ICON}}}&color={{{COLOR}}}
+
+# [Script Content]
+# - optimized-DNS.js: Local script with compatibility check for DNS cache clearing.
+[Script Content]
+optimized-DNS.js =
+/**
+ * Clear Surge DNS Cache
+ * - Checks if $surge.clearDNSCache() is available before execution.
+ * - Provides error notification if API is unsupported.
+ */
+if (typeof $surge.clearDNSCache === 'function') {
+    $surge.clearDNSCache();
+    $notification.post("Flush DNS Cache", "", "DNS cache cleared successfully.");
+} else {
+    $notification.post("DNS Cache Error", "", "This Surge version does not support DNS cache clearing. Please update Surge to 5.8 or later.");
+}
+$done();
