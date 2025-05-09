@@ -6,15 +6,8 @@
 # 更新日期：2025.05.09
 # 版本：1.0
 
-# [Panel]
-# - Displays an interactive button in Surge UI to manually clear DNS cache.
-# - Updates every 600 seconds (10 minutes) to refresh panel display.
-# - Uses TITLE, ICON, and COLOR from #!arguments for customization.
 [Panel]
-FlushDNS = script-name=FlushDNS, update-interval=600
+FlushDNS = script-name=FlushDNS,update-interval=600
 
-# [Script]
-# - FlushDNS: Handles manual clearing via panel button.
-# - Uses optimized remote script with compatibility check.
 [Script]
-FlushDNS = type=generic, timeout=10, script-path=https://raw.githubusercontent.com/uslsu/Surge/main/Modules/FlushDNS/DNS/DNS.js, argument=title={{{TITLE}}}&icon={{{ICON}}}&color={{{COLOR}}}
+FlushDNS = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/Rabbit-Spec/Surge/Master/Module/Panel/Flush-DNS/Moore/Flush-DNS.js,argument=title={{{TITLE}}}&icon={{{ICON}}}&color={{{COLOR}}}&server=false
